@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+h1 {
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 4.375em;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    position: relative;
+}
+
+.name {
+    position: absolute;
+    font-size: 1.5625em;
+    font-family: 'Comfortaa', cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: transform 0.5s ease-out;
+}
+
+.content img {
+    width: 21.875em;
+    height: auto;
+    border-radius: 0.625em;
+    margin-bottom: 1.25em;
+}
+
+.slide:hover .name {
+    transform: translate(120%, -50%);
+}
+
+.content:hover img {
+    transform: scale(0.9);
+    filter: blur(0.125em);
+    transition: filter 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.content img:hover {
+    transform: scale(1.1);
+    filter: blur(0);
+    box-shadow: 0 0.3125em 1.25em rgba(0, 0, 0, 0.8);
+}
